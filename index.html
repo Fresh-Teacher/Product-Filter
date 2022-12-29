@@ -1,179 +1,318 @@
 <!DOCTYPE html>
 <html>
-    <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <header>
+        <h1>Fresh App</h1>
+        <button class="theme-button">Dark Theme</button>
+    </header>
 </head>
 
-  <title>Fresh App</title>
-  <style>
+<title>Fresh App</title>
+<style>
+    
+    :root {
+      --primary-color: #333;
+      --secondary-color: #fff;
+      --tertiary-color: #444;
+      --text-color: #fff;
+    }
+
+    .light-theme {
+      --primary-color: #fff;
+      --secondary-color: #333;
+      --tertiary-color: #ddd;
+      --text-color: #333;
+    }
+
+    /* Theme padding */
+    header .theme-button {
+  /* Other styles go here */
+  padding: 10px 20px; /* Add padding to the button */
+}
+
+    body {
+      background-color: var(--primary-color);
+      color: var(--text-color);
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    /* Light theme style */
+    .light-theme {
+  /* Styles for light theme go here */
+}
+
+    header h1 {
+        margin: 0;
+    }
+
+    header .theme-button {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    header .theme-button:hover {
+        color: #ccc;
+    }
+
     /* Small screens */
-@media only screen and (max-width: 600px) {
-  /* Styles go here */
-}
+    @media only screen and (max-width: 600px) {
+        /* Styles go here */
+    }
 
-/* Medium screens */
-@media only screen and (min-width: 601px) and (max-width: 960px) {
-  /* Styles go here */
-}
+    /* Medium screens */
+    @media only screen and (min-width: 601px) and (max-width: 960px) {
+        /* Styles go here */
+    }
 
-/* Large screens */
-@media only screen and (min-width: 961px) {
-  /* Styles go here */
-}
+    /* Large screens */
+    @media only screen and (min-width: 961px) {
+        /* Styles go here */
+    }
 
-/* "X" symbol */
-.close-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  display: none;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
+    /* "X" symbol */
+    .close-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: none;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
 
-.close-button svg {
-  width: 30px;
-  height: 30px;
-  fill: #333;
-}
+    .close-button svg {
+        width: 30px;
+        height: 30px;
+        fill: #333;
+    }
 
-#drawer.open .close-button {
-  display: block;
-}
+    #drawer.open .close-button {
+        display: block;
+    }
 
     /* Navigation drawer */
-#drawer {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  transition: left 0.3s;
-}
+    #drawer {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: left 0.3s;
+    }
 
-/* Show navigation drawer */
-#drawer.open {
-  left: 0;
-}
+    /* Show navigation drawer */
+    #drawer.open {
+        left: 0;
+    }
 
-/* Navigation drawer button */
-#drawer-button {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
+    /* Navigation drawer button */
+    #drawer-button {
+        position: fixed;
+        top: 40px;
+        left: 20px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
 
-/* Hamburger icon */
-#drawer-button svg {
-  width: 30px;
-  height: 30px;
-  fill: #333;
-}
+    /* Hamburger icon */
+    #drawer-button svg {
+        width: 30px;
+        height: 30px;
+        fill: #333;
+    }
 
-/* Page content */
-main {
-  margin: 50px;
-}
+    /* Page content */
+    main {
+        margin: 50px;
+    }
 
 
 
-/* Navigation drawer title */
-#drawer h1 {
-  margin: 0;
-  padding: 20px;
-  font-size: 18px;
-  font-weight: normal;
-  color: #333;
-  background-color: #f7f7f7;
-  float: right;
-}
+    /* Navigation drawer title */
+    #drawer h1 {
+        margin: 0;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: normal;
+        color: #333;
+        background-color: #f7f7f7;
+        float: right;
+    }
 
-/* Navigation drawer menu items */
-#drawer ul li {
-  list-style: none;
-}
+    /* Navigation drawer menu items */
+    #drawer ul li {
+        list-style: none;
+    }
 
-#drawer ul li button {
-  display: block;
-  width: 100%;
-  padding: 20px;
-  font-size: 16px;
-  color: #333;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
+    #drawer ul li button {
+        display: block;
+        width: 100%;
+        padding: 20px;
+        font-size: 16px;
+        color: #333;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
 
-#drawer ul li button:hover {
-  background-color: #ebebeb;
-}
+    #drawer ul li button:hover {
+        background-color: #ebebeb;
+    }
 </style>
 </head>
+
 <body>
     <!-- Navigation drawer button -->
-<button id="drawer-button">
-    <svg width="24" height="24" viewBox="0 0 24 24">
-      <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
-    </svg>
-  </button>
-  
-  <!-- Navigation drawer -->
-  <nav id="drawer">
-    <h1>Fresh App</h1>
-    <ul>
-      <li><button>Home</button></li>
-      <li><button>About</button></li>
-      <li><button>Contact</button></li>
-    </ul>
-  </nav>
-  
-  <!-- Page content -->
-  <main>
-    <h1>Welcome to my website!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
-  </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-  <script>
-    // Get elements
-    const drawer = document.getElementById('drawer');
-    const drawerButton = document.getElementById('drawer-button');
-  
-    // Toggle navigation drawer
-    drawerButton.addEventListener('click', () => {
-      drawer.classList.toggle('open');
-    });
-  
-    // Add "X" symbol to close navigation drawer
-    const closeButton = document.createElement('div');
-    closeButton.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>';
-    closeButton.classList.add('close-button');
-    drawer.insertBefore(closeButton, drawer.firstChild);
-  
-    // Close navigation drawer on swipe back or close button click
-    const hammer = new Hammer(drawer);
-    hammer.on('swipeleft', () => {
-      drawer.classList.remove('open');
-    });
-    closeButton.addEventListener('click', () => {
-      drawer.classList.remove('open');
-    });
-  </script>
-  
-  
+    <button id="drawer-button">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+            <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+        </svg>
+    </button>
+
+    <!-- Navigation drawer -->
+    <nav id="drawer">
+        <h1>Fresh App</h1>
+        <ul>
+            <li><button>Home</button></li>
+            <li><button>About</button></li>
+            <li><button>Contact</button></li>
+        </ul>
+    </nav>
+
+    <!-- Page content -->
+    <main>
+        <h1>Welcome to my website!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script>
+        //Theme
+        const themeButton = document.querySelector('.theme-button');
+const body = document.querySelector('body');
+
+themeButton.addEventListener('click', () => {
+  body.classList.toggle('light-theme');
+
+  if (body.classList.contains('light-theme')) {
+    themeButton.textContent = 'Dark theme';
+  } else {
+    themeButton.textContent = 'Light theme';
+  }
+});
+        // Get elements
+        const drawer = document.getElementById('drawer');
+        const drawerButton = document.getElementById('drawer-button');
+
+        // Toggle navigation drawer
+        drawerButton.addEventListener('click', () => {
+            drawer.classList.toggle('open');
+        });
+
+        // Add "X" symbol to close navigation drawer
+        const closeButton = document.createElement('div');
+        closeButton.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>';
+        closeButton.classList.add('close-button');
+        drawer.insertBefore(closeButton, drawer.firstChild);
+
+        // Close navigation drawer on swipe back or close button click
+        const hammer = new Hammer(drawer);
+        hammer.on('swipeleft', () => {
+            drawer.classList.remove('open');
+        });
+        closeButton.addEventListener('click', () => {
+            drawer.classList.remove('open');
+        });
+    </script>
+
+
 </body>
+
 </html>
