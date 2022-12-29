@@ -30,6 +30,11 @@
   --text-color: #fff;
 }
 
+/* Change color of selected text */
+.selected {
+  color: blue;
+}
+
     /* Theme padding */
     header .theme-button {
   /* Other styles go here */
@@ -46,7 +51,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color: #02569B;
+        background-color: blue;
         color: #fff;
         display: flex;
         justify-content: space-between;
@@ -57,9 +62,10 @@
     /* Style the WhatsApp message icon */
     #whatsapp-icon {
         position: fixed; /* Set the icon to fixed position */
-        bottom: 0; /* Align the icon to the bottom of the page */
+        bottom: 50; /* Align the icon to the bottom of the page */
         right: 20px; /* Add some padding to the right side */
         z-index: 1; /* Make sure the icon is displayed on top of other elements */
+        padding-bottom: 20px;
       }
 
       #whatsapp-icon i {
@@ -141,7 +147,7 @@
         left: -250px;
         width: 250px;
         height: 100%;
-        background-color: #02569B;
+        background-color: blue;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         transition: left 0.3s;
     }
@@ -168,7 +174,7 @@
 /* Style for selected buttons */
 #navbar a.selected {
     background-color: #333;
-    color: #fff;
+    color: blue;
   }
   
  /* Style the selected navbar item */
@@ -210,7 +216,7 @@
     #drawer-button svg {
         width: 30px;
         height: 30px;
-        fill: #02569B;    }
+        fill: blue;    }
 
     /* Page content */
     main {
@@ -351,6 +357,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script>
+        
         // Get a reference to the navbar element
   const navbar = document.querySelector('#navbar');
   
