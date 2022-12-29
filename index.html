@@ -142,6 +142,32 @@
         outline: none;
     }
 
+   /* Style the navigation bar */
+   #navbar {
+        background-color: #02569B; /* Set the background color to red */
+        color: #fff;
+        /* Set the navbar to fixed position at the bottom of the page */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        /* Add some padding and styling for the links */
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px 20px;
+      }
+
+      #navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      #navbar a:hover {
+        color: #ccc;
+      }
+
     /* Hamburger icon */
     #drawer-button svg {
         width: 30px;
@@ -271,6 +297,14 @@
             hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
             fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
     </main>
+
+    <!-- Sticky bottom navigation bar -->
+    <nav id="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script>
         //Theme
