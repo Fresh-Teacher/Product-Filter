@@ -165,6 +165,19 @@
         outline: none;
     }
 
+/* Style for selected buttons */
+#navbar a.selected {
+    background-color: #333;
+    color: #fff;
+  }
+  
+ /* Style the selected navbar item */
+#navbar a.selected {
+  background-color: #ddd; /* Add a background color */
+  border-radius: 20px; /* Add rounded corners */
+  padding: 10px 20px; /* Add padding */
+}
+
    /* Style the navigation bar */
    #navbar {
         background-color: #02569B; /* Set the background color to red */
@@ -331,14 +344,43 @@
 
     <!-- Sticky bottom navigation bar -->
     <nav id="navbar">
-        <a href="#">Home</a>
+        <a href="#" class="selected">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
       </nav>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script>
-        
+        // Get a reference to the navbar element
+  const navbar = document.querySelector('#navbar');
+  
+// Get all navbar items
+const navbarItems = document.querySelectorAll("#navbar a");
+
+// Add a click event listener to each navbar item
+navbarItems.forEach(item => {
+  item.addEventListener("click", e => {
+    // Remove the selected class from all navbar items
+    navbarItems.forEach(item => item.classList.remove("selected"));
+    // Add the selected class to the clicked navbar item
+    e.target.classList.add("selected");
+  });
+});
+
+  // Add an event listener to the navbar that listens for clicks
+  navbar.addEventListener('click', (event) => {
+    // If the clicked element is an anchor tag
+    if (event.target.tagName === 'A') {
+      // Remove the selected class from all buttons
+      navbar.querySelectorAll('a').forEach((button) => {
+        button.classList.remove('selected');
+      });
+      
+      // Add the selected class to the clicked button
+      event.target.classList.add('selected');
+    }
+  });
+
 // Get the theme toggle button
 const themeButton = document.querySelector(".theme-button");
 
