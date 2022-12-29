@@ -14,18 +14,20 @@
 <style>
     
     :root {
-      --primary-color: #333;
-      --secondary-color: #fff;
-      --tertiary-color: #444;
-      --text-color: #fff;
-    }
+  /* Default values for the light theme go here */
+  --primary-color: #fff;
+  --secondary-color: #333;
+  --tertiary-color: #ddd;
+  --text-color: #333;
+}
 
-    .light-theme {
-      --primary-color: #fff;
-      --secondary-color: #333;
-      --tertiary-color: #ddd;
-      --text-color: #333;
-    }
+.dark-theme {
+  /* Default values for the dark theme go here */
+  --primary-color: #333;
+  --secondary-color: #fff;
+  --tertiary-color: #444;
+  --text-color: #fff;
+}
 
     /* Theme padding */
     header .theme-button {
@@ -168,6 +170,8 @@
         color: #ccc;
       }
 
+      
+
     /* Hamburger icon */
     #drawer-button svg {
         width: 30px;
@@ -307,17 +311,21 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script>
-        //Theme
-        const themeButton = document.querySelector('.theme-button');
-const body = document.querySelector('body');
+        
+// Get the theme toggle button
+const themeButton = document.querySelector(".theme-button");
 
-themeButton.addEventListener('click', () => {
-  body.classList.toggle('light-theme');
+// Add an event listener for the click event
+themeButton.addEventListener("click", function() {
+  // Toggle the light-theme and dark-theme classes on the html element
+  document.documentElement.classList.toggle("light-theme");
+  document.documentElement.classList.toggle("dark-theme");
 
-  if (body.classList.contains('light-theme')) {
-    themeButton.textContent = 'Dark theme';
+  // Update the text of the theme toggle button
+  if (document.documentElement.classList.contains("light-theme")) {
+    themeButton.innerHTML = "Light Theme";
   } else {
-    themeButton.textContent = 'Light theme';
+    themeButton.innerHTML = "Dark Theme";
   }
 });
         // Get elements
