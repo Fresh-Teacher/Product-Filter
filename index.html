@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <header>
         <h1>Fresh App</h1>
-        <button class="theme-button">Light Theme</button>
+        <button class="theme-button">Dark Theme</button>
     </header>
 </head>
 
@@ -52,6 +53,26 @@
         align-items: center;
         padding: 0 20px;
     }
+
+    /* Style the WhatsApp message icon */
+    #whatsapp-icon {
+        position: fixed; /* Set the icon to fixed position */
+        bottom: 0; /* Align the icon to the bottom of the page */
+        right: 20px; /* Add some padding to the right side */
+        z-index: 1; /* Make sure the icon is displayed on top of other elements */
+      }
+
+      #whatsapp-icon i {
+        font-size: 50px; /* Set the size of the icon */
+        color: #25D366; /* Set the color of the icon */
+      }
+
+      #whatsapp-icon {
+  position: fixed; /* Set the icon to fixed position */
+  bottom: 50px; /* Align the icon 50 pixels above the bottom of the page */
+  right: 20px; /* Add some padding to the right side */
+  z-index: 1; /* Make sure the icon is displayed on top of other elements */
+}
 
     /* Light theme style */
     .light-theme {
@@ -220,6 +241,12 @@
 </head>
 
 <body>
+     <!-- Add a WhatsApp message icon -->
+<a href="https://api.whatsapp.com/send?phone=+256750687790&text=Hi%20Fresh%20Teacher" id="whatsapp-icon">
+
+    <!-- Use the font awesome WhatsApp icon -->
+    <i class="fab fa-whatsapp fa-phone"></i>  </a>
+
     <!-- Navigation drawer button -->
     <button id="drawer-button">
         <svg width="24" height="24" viewBox="0 0 24 24">
