@@ -12,154 +12,6 @@
 </head>
 <title>Fresh App</title>
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
-::-webkit-scrollbar {
-    display: none;
-}
-
-:root {
-    --white: #fff;
-    --black: #1c2b2d;
-    --blue: #31326f;
-    --light-blue: #005490;
-    --color-primary: #9d0191;
-    --color-sec: #db6400;
-    --grey: #eee;
-    --dark-grey: #222831;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    /* font-size: 10px; */
-}
-
-body {
-    font-family: "Open Sans", sans-serif;
-}
-
-p {
-    font-size: 1.6rem;
-    line-height: 1.5;
-}
-
-img {
-    /* width: 100%; */
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Start Here */
-
-form input {
-    width: 20rem;
-    padding: 0.7rem;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    font-size: 1rem;
-    border-bottom: 2px solid var(--color-sec);
-    margin-bottom: 1rem;
-}
-
-.btn {
-    font-size: 1rem;
-    text-decoration: none;
-    color: var(--white);
-    background-color: var(--color-sec);
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.active {
-    background-color: var(--color-primary);
-}
-
-#store-products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    grid-gap: 2rem;
-    padding: 2rem 0;
-}
-
-.store-product {
-    border: 1px solid var(--grey);
-    border-radius: 3px;
-    max-width: 250px;
-    animation: slide-up 0.5s ease 1;
-    transform: all 0.3s;
-}
-
-.product-details {
-    text-align: center;
-    padding-bottom: 1rem;
-    background-color: var(--grey);
-}
-
-.product-details h2 {
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.product-details p {
-    font-size: 1rem;
-    color: green;
-    padding-bottom: 1rem;
-    font-weight: 700;
-}
-
-.product-details p span {
-    text-decoration: line-through;
-    color: red;
-    font-weight: normal;
-}
-
-.product-details a {
-    font-size: 1rem;
-    text-decoration: none;
-    background-color: var(--color-sec);
-    color: var(--white);
-    padding: 0.5rem 1rem;
-    border-radius: 3px;
-}
-
-.product-details a:hover {
-    background-color: var(--color-primary);
-}
-
-.no-result {
-    display: none;
-    color: red;
-    padding-bottom: 2rem;
-}
-
-.show {
-    display: block;
-}
-
-@keyframes slide-up {
-    0% {
-        transform: translateY(2rem);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@media screen and (max-width: 600px) {
-    #store-products {
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-        padding: 1rem;
-    }
-}
     
     :root {
   /* Default values for the light theme go here */
@@ -246,6 +98,21 @@ form input {
 
     header .theme-button:hover {
         color: #ccc;
+    }
+
+    /* Small screens */
+    @media only screen and (max-width: 600px) {
+        /* Styles go here */
+    }
+
+    /* Medium screens */
+    @media only screen and (min-width: 601px) and (max-width: 960px) {
+        /* Styles go here */
+    }
+
+    /* Large screens */
+    @media only screen and (min-width: 961px) {
+        /* Styles go here */
     }
 
     /* "X" symbol */
@@ -417,23 +284,68 @@ form input {
 
     <!-- Page content -->
     <main>
-        <div class="container">
-            <h1>Search Files</h1>
-            <!-- Search Box -->
-            <div class="search-box">
-                <form action="" onsubmit="return false">
-                    <input type="text" id="search" placeholder="Type a keyword here to search..." />
-                </form>
-            </div>
-
-            <div class="filter-box">
-                <a href="https://freshteacher.software/nursery/" class="btn active" data-filter="notes">Nursery</a>
-                <a href="https://freshteacher.software/primary/" class="btn" data-filter="schemes">Primary</a>
-                <a href="https://freshteacher.software/secondary/" class="btn" data-filter="exams">Secondary</a>
-            </div>
-        </div>
         
-        
+        <h1>Welcome to my website!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
+            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
+            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
+            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
+            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
+            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
     </main>
 
     <!-- Sticky bottom navigation bar -->
@@ -445,53 +357,7 @@ form input {
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script>
-        const btns = document.querySelectorAll(".btn");
-const storeProducts = document.querySelectorAll(".store-product");
-
-for (let i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function(e) {
-        const current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-
-        // Switch Tab content
-        const filter = e.target.dataset.filter;
-        // console.log(filter);
-        storeProducts.forEach((product) => {
-            if (filter === "all") {
-                product.style.display = "block";
-            } else if (product.classList.contains(filter)) {
-                product.style.display = "block";
-            } else {
-                product.style.display = "none";
-            }
-        });
-    });
-}
-
-// SEARCH FILTER
-const search = document.getElementById("search");
-const productName = document.querySelectorAll(".product-details h2");
-const noResult = document.querySelector(".no-result");
-
-search.addEventListener("keyup", filterProducts);
-
-function filterProducts(e) {
-    const text = e.target.value.toLowerCase();
-
-    productName.forEach((product) => {
-        const item = product.textContent;
-
-        if (item.toLowerCase().indexOf(text) != -1) {
-            product.parentElement.parentElement.style.display = "block";
-            noResult.style.display = "none";
-        } else {
-            product.parentElement.parentElement.style.display = "none";
-            noResult.style.display = "block";
-        }
-    });
-}
-
+        
         // Get a reference to the navbar element
   const navbar = document.querySelector('#navbar');
   
