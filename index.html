@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">z
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <header>
-        <h1>Fresh App</h1>
-        <button class="theme-button">Dark Theme</button>
+        <h1>Sure Key App</h1>
+        <!-- <button class="theme-button">Dark Theme</button> -->
     </header>
 </head>
 <title>Fresh App</title>
@@ -46,6 +46,7 @@
     }
 
     header {
+        text-align: center; /* Center the h1 element */
         position: fixed;
         top: 0;
         left: 0;
@@ -53,38 +54,13 @@
         background-color: #02569B;
         color: #fff;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         padding: 0 20px;
     }
 
-    /* Style the WhatsApp message icon */
-    #whatsapp-icon {
-        position: fixed; /* Set the icon to fixed position */
-        bottom: 50; /* Align the icon to the bottom of the page */
-        right: 20px; /* Add some padding to the right side */
-        z-index: 1; /* Make sure the icon is displayed on top of other elements */
-        padding-bottom: 20px;
-      }
-
-      #whatsapp-icon i {
-        font-size: 50px; /* Set the size of the icon */
-        color: #25D366; /* Set the color of the icon */
-      }
-
-      #whatsapp-icon {
-  position: fixed; /* Set the icon to fixed position */
-  bottom: 50px; /* Align the icon 50 pixels above the bottom of the page */
-  right: 20px; /* Add some padding to the right side */
-  z-index: 1; /* Make sure the icon is displayed on top of other elements */
-}
-
-    /* Light theme style */
-    .light-theme {
-  /* Styles for light theme go here */
-}
-
     header h1 {
+      text-align: center; /* Center the h1 element */
         margin: 0;
     }
 
@@ -99,6 +75,26 @@
     header .theme-button:hover {
         color: #ccc;
     }
+
+    @media only screen and (max-width: 600px) {
+  .jumbotron {
+    height: 200px; /* Set the height to 200 pixels for small screens */
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 960px) {
+  .jumbotron {
+    height: 300px; /* Set the height to 300 pixels for medium screens */
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .jumbotron {
+    height: auto; /* Set the height to 400 pixels for large screens */
+  }
+}
+
+
 
     /* Small screens */
     @media only screen and (max-width: 600px) {
@@ -155,6 +151,12 @@
     #drawer.open {
         left: 0;
     }
+
+    .jumbotron {
+  width: 100%; /* Set the width to 100% */
+  height: auto; /* Set the height to auto to allow the jumbotron to scale to the full width of the page */
+}
+
 
     /* Navigation drawer button */
     #drawer-button {
@@ -255,15 +257,41 @@
     #drawer ul li button:hover {
         background-color: #ebebeb;
     }
+
+    /*Jumbotron*/
+    .jumbotron {
+  background-image: url(image1.jpg); /* Set the background image to the first image in your slider */
+  background-size: cover; /* Scale the background image to cover the entire jumbotron */
+  background-position: center; /* Center the background image */
+  height: 300px; /* Set the height of the jumbotron */
+  display: flex; /* Enable flex layout */
+  flex-direction: column; /* Stack the jumbotron elements vertically */
+  justify-content: center; /* Center the elements vertically */
+  text-align: center; /* Center the text */
+  color: #fff; /* Set the text color to white */
+  width: 100%; /* Set the width to 100% */
+}
+
+.jumbotron h1 {
+  font-size: 32px; /* Increase the font size of the heading */
+  color: rgb(235, 141, 0);
+}
+
+.jumbotron p {
+  font-size: 18px; /* Increase the font size of the paragraph */
+}
+
 </style>
 </head>
 
 <body>
-     <!-- Add a WhatsApp message icon -->
-<a href="https://api.whatsapp.com/send?phone=+256750687790&text=Hi%20Fresh%20Teacher" id="whatsapp-icon">
-
-    <!-- Use the font awesome WhatsApp icon -->
-    <i class="fab fa-whatsapp fa-phone"></i>  </a>
+  
+<!-- Jumbotron --><br><br>
+<div class="jumbotron">
+  <!-- <h1>Sure Key Education Services</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus auctor magna eu est malesuada, sit amet elementum ipsum ultricies. Curabitur ac nibh id nibh vehicula iaculis.</p> -->
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><button class="btn btn-primary"><marquee behavior="alternate" scrollamount="2">SURE KEY EDUCATION SERVICES</marquee></button>
+</div>
 
     <!-- Navigation drawer button -->
     <button id="drawer-button">
@@ -292,60 +320,7 @@
             volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
             hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
             fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
-            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
-            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
-            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
-            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
-            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
-            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
-            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
-            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
-            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
-            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
-            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
-            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
-            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
-            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
-            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
-            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
-            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
-            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
-            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
-            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
-            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
-            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
-            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
-            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
-            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
-            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
-            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
-            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
-            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
-            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
-            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
-            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
-            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
-            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
-            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
-            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
-            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
-            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
-            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
-            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, lacus a tincidunt accumsan, dui purus
-            elementum urna, vel luctus lacus velit a erat. Aliquam auctor diam non libero tincidunt, id porttitor ipsum
-            cursus. Aenean hendrerit consectetur erat, sit amet sollicitudin tortor tempus non. Sed vel velit vel nisl
-            volutpat semper. Vestibulum at magna porttitor, volutpat nulla id, congue enim. Morbi non luctus tortor. In
-            hac habitasse platea dictumst. Ut placerat ligula ac magna pharetra vehicula. Aliquam laoreet, leo at
-            fermentum pellentesque, lacus quam elementum ante, quis rutrum lectus tortor quis nisi.</p>
+        
     </main>
 
     <!-- Sticky bottom navigation bar -->
